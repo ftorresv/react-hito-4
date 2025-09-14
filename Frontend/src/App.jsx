@@ -1,28 +1,32 @@
-import './App.css'
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/Home.jsx"
-import Footer from './components/Footer.jsx'
-import Navbar from './components/Navbar.jsx'
-import Register from './components/Register.jsx'
-import Login from './components/Login.jsx'
-import Cart from './components/Cart.jsx';
-import Pizza from './components/Pizza.jsx';
+import Home from "./components/Pages/Home.jsx";
+import Footer from "./components/Footer.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Register from "./components/Pages/Register.jsx";
+import Login from "./components/Pages/Login.jsx";
+import Cart from "./components/Pages/Cart.jsx";
+import Pizza from "./components/Pages/Pizza.jsx";
+import Profile from "./components/Pages/Profile.jsx";
+import NotFound from "./components/Pages/NotFound.jsx";
 
 function App() {
   return (
-      <div>
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/cart" element={<Cart />} />
-          </Routes>
-          <Pizza />
-          <Footer />
-        </BrowserRouter>
-      </div>
-  )
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/pizza/p001" element={<Pizza />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
+  );
 }
-export default App
+export default App;

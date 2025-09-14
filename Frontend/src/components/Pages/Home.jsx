@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import CardPizza from "./CardPizza.jsx";
+import CardPizza from "../CardPizza.jsx";
 // import {pizzas} from '../assets/js/pizzas.js' Esta línea se reemplaza por el consumo de la API.
-import Header from "./Header.jsx";
+import Header from "../Header.jsx";
 function Home() {
   const [pizzas, setPizzas] = useState([]);
   useEffect(() => {

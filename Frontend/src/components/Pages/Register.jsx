@@ -1,4 +1,4 @@
-import "../Register.css";
+import "../../Register.css";
 import { useState } from "react";
 
 const Register = () => {
